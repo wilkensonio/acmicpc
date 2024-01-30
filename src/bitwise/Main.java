@@ -1,9 +1,8 @@
 package bitwise;
+
 import java.util.Arrays;
 
-
 public class Main {
-
     public static void main(String[] args) {
         String b1 = "1101";
         String b2 = "10";
@@ -16,9 +15,16 @@ public class Main {
                 b1, b2,
                 BinarySubtraction.sub(b1, b2));
 
-        int[] arr = {4,1,2,1,8, 2, 4,5, 5};
+        int[] arr = {4, 1, 2, 1, 8, 2, 4, 5, 5};
+
         System.out.printf("non-repeated number  %s –> %d \n",
-                 Arrays.toString(arr),
+                Arrays.toString(arr),
                 RepeatOne.repeatNumber(arr));
+
+        String n = "10011101";
+        int j = Integer.parseInt(n, 2) & (0xff << 2);
+        System.out.println(j);
+
+        System.out.println(0x04030201);
     }
 }
